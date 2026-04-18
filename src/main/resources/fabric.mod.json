@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "luasprogression",
+	"version": "${version}",
+	"name": "luasprogression",
+	"description": "This is my take on a more balanced progression system for Minecraft.",
+	"authors": [
+		"Eduardo Gisoldi (Lua)"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/eduardogisoldi/luasprogressionmod"
+	},
+	"license": "MIT",
+	"icon": "assets/luasprogression/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"gisoldi.progression.Luasprogression"
+		],
+		"fabric-datagen": [
+			"gisoldi.progression.LuasprogressionDataGenerator"
+		],
+		"client": [
+			"gisoldi.progression.LuasprogressionClient"
+		]
+	},
+	"mixins": [
+		"luasprogression.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
