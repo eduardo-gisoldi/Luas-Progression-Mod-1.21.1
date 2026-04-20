@@ -1,0 +1,41 @@
+package gisoldi.progression.item;
+
+import gisoldi.progression.Luasprogression;
+import gisoldi.progression.block.ModBlocks;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
+
+/**
+ * This class handles the registration of custom item groups (creative tabs) for the Luas Progression mod.
+ * Item groups organize items and blocks in the creative inventory for better navigation.
+ */
+public class ModItemGroups {
+    // Registers a custom item group called "Luas Progression Items" in the creative inventory
+    public static final ItemGroup LUAS_PROGRESSION_ITEMS = Registry.register(
+            Registries.ITEM_GROUP, Identifier.of(Luasprogression.MOD_ID, "luas_progression_items"),
+            FabricItemGroup.builder()
+                    // Sets the icon for the item group tab using a Pebble item stack
+                    .icon(() -> new ItemStack(ModItems.PEBBLE))
+                    // Sets the display name for the item group, using a translatable text key
+                    .displayName(Text.translatable("itemgroup.luasprogression.luas_progression_items"))
+                    // Defines the entries (items and blocks) that appear in this item group
+                    .entries((displayContext, entries) -> {
+                        entries.add(ModItems.PEBBLE);        // Adds the Pebble item
+                        entries.add(ModItems.STEEL_INGOT);   // Adds the Steel Ingot item
+                        entries.add(ModBlocks.STEEL_BLOCK);  // Adds the Steel Block item
+                    })
+            .build());
+
+    /**
+     * This method is called to register the item groups.
+     * Currently, it only logs a message, but can be expanded for additional setup if needed.
+     */
+    public static void registerItemGroups() {
+        Luasprogression.LOGGER.info("Registering Item Groups for " + Luasprogression.MOD_ID);
+    }
+}

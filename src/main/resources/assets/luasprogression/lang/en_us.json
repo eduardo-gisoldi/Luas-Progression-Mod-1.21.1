@@ -1,3 +1,8 @@
 {
-  "item.luasprogression.pebble": "Pebble"
+  "item.luasprogression.pebble": "Pebble",
+  "item.luasprogression.steel_ingot": "Steel Ingot",
+
+  "block.luasprogression.steel_block": "Block of Steel",
+
+  "itemgroup.luasprogression.luas_progression_items": "Lua's Progression Items"
 }

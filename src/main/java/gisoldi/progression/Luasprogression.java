@@ -1,5 +1,7 @@
 package gisoldi.progression;
 
+import gisoldi.progression.block.ModBlocks;
+import gisoldi.progression.item.ModItemGroups;
 import gisoldi.progression.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -22,6 +24,8 @@ public class Luasprogression implements ModInitializer {
 
 		LOGGER.info("Hello Fabric world!");
 
+		ModItemGroups.registerItemGroups();
 		ModItems.registerItems();
+		ModBlocks.registerBlocks();
 	}
 }
