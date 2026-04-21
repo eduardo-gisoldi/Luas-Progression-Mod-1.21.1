@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "luasprogression:steel_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "luasprogression:steel_ingot"
+  }
+}

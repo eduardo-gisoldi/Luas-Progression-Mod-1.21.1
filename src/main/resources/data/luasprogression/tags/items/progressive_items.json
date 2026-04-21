@@ -1,0 +1,13 @@
+{
+  "values": [
+    "luasprogression:pebble",
+    "minecraft:stick",
+    "minecraft:copper_ingot",
+    "minecraft:iron_ingot",
+    "luasprogression:steel_ingot",
+    "minecraft:gold_ingot",
+    "minecraft:diamond",
+    "minecraft:netherite_ingot",
+    "minecraft:netherite_scrap"
+  ]
+}

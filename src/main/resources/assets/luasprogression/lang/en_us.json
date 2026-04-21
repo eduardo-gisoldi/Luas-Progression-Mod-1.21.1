@@ -1,5 +1,6 @@
 {
   "item.luasprogression.pebble": "Pebble",
+  "item.luasprogression.pebble.tooltip": "Pebbles can be used with sticks!",
   "item.luasprogression.steel_ingot": "Steel Ingot",
 
   "block.luasprogression.steel_block": "Block of Steel",
