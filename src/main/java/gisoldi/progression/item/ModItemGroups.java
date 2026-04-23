@@ -5,6 +5,7 @@ import gisoldi.progression.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
@@ -25,9 +26,29 @@ public class ModItemGroups {
                     .displayName(Text.translatable("itemgroup.luasprogression.luas_progression_items"))
                     // Defines the entries (items and blocks) that appear in this item group
                     .entries((displayContext, entries) -> {
-                        entries.add(ModItems.PEBBLE);        // Adds the Pebble item
-                        entries.add(ModItems.STEEL_INGOT);   // Adds the Steel Ingot item
-                        entries.add(ModBlocks.STEEL_BLOCK);  // Adds the Steel Block item
+                        entries.add(ModItems.PEBBLE);
+                        entries.add(Items.STICK);
+                        entries.add(ModItems.WOODEN_HATCHET);
+                        entries.add(ModItems.WOODEN_PICK);
+                        entries.add(ModItems.WOODEN_TROWEL);
+                        entries.add(ModItems.RAW_COPPER_NUGGET);
+                        entries.add(Items.RAW_COPPER);
+                        entries.add(ModItems.COPPER_NUGGET);
+                        entries.add(Items.COPPER_INGOT);
+                        entries.add(ModItems.RAW_IRON_NUGGET);
+                        entries.add(Items.RAW_IRON);
+                        entries.add(Items.IRON_INGOT);
+                        entries.add(Items.COAL);
+                        entries.add(ModItems.STEEL_INGOT);
+                        entries.add(ModItems.RAW_GOLD_NUGGET);
+                        entries.add(Items.RAW_GOLD);
+                        entries.add(Items.GOLD_INGOT);
+                        entries.add(Items.QUARTZ);
+                        entries.add(ModItems.ROSE_GOLD_INGOT);
+                        entries.add(Items.DIAMOND);
+                        entries.add(Items.WITHER_ROSE);
+                        entries.add(ModItems.WITHERING_DUST);
+                        entries.add(Items.NETHERITE_INGOT);
                     })
             .build());
 

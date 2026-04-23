@@ -12,7 +12,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.entry.ItemEntry;
-import net.minecraft.loot.entry.LootPoolEntry;
 import net.minecraft.loot.function.ApplyBonusLootFunction;
 import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
@@ -28,18 +27,28 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
+        //Blocks that drop themselves
         addDrop(ModBlocks.STEEL_BLOCK);
 
-        addDrop(Blocks.COPPER_ORE, Items.RAW_COPPER_BLOCK);
+        //New Ore Drops
+        addDrop(Blocks.COPPER_ORE, multipleOreDrops(Blocks.COPPER_ORE
+                , ModItems.RAW_COPPER_NUGGET, 2, 5));
         addDrop(Blocks.DEEPSLATE_COPPER_ORE, multipleOreDrops(Blocks.DEEPSLATE_COPPER_ORE
                 , Items.RAW_COPPER, 1, 3));
-        addDrop(Blocks.IRON_ORE, ModItems.PEBBLE);
+        addDrop(Blocks.IRON_ORE, multipleOreDrops(Blocks.IRON_ORE
+                , ModItems.RAW_IRON_NUGGET, 1, 3));
         addDrop(Blocks.DEEPSLATE_IRON_ORE, multipleOreDrops(Blocks.DEEPSLATE_IRON_ORE
                 , Items.RAW_IRON, 1, 2));
+        addDrop(Blocks.GOLD_ORE, multipleOreDrops(Blocks.GOLD_ORE
+                , ModItems.RAW_GOLD_NUGGET, 3, 6));
+        addDrop(Blocks.DEEPSLATE_GOLD_ORE, multipleOreDrops(Blocks.DEEPSLATE_GOLD_ORE
+                , Items.RAW_GOLD, 1, 3));
+
+
     }
 
 
-
+    //Helper Methods
     public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {
         RegistryWrapper.Impl<Enchantment> impl = this.registryLookup.getWrapperOrThrow(RegistryKeys.ENCHANTMENT);
         return this.dropsWithSilkTouch(drop, this.applyExplosionDecay(drop,

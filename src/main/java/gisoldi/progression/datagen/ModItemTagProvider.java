@@ -17,14 +17,27 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup lookup) {
         getOrCreateTagBuilder(ModTags.Items.PROGRESSIVE_ITEMS)
-                .add(ModItems.PEBBLE)
-                .add(Items.STICK)
-                .add(Items.COPPER_INGOT)
-                .add(Items.IRON_INGOT)
-                .add(Items.COAL)
-                .add(ModItems.STEEL_INGOT)
-                .add(Items.GOLD_INGOT)
-                .add(Items.DIAMOND)
-                .add(Items.NETHERITE_INGOT);
+        .add(ModItems.PEBBLE)
+        .add(Items.STICK)
+        .add(ModItems.WOODEN_HATCHET)
+        .add(ModItems.WOODEN_PICK)
+        .add(ModItems.WOODEN_TROWEL)
+        .add(ModItems.RAW_COPPER_NUGGET)
+        .add(ModItems.COPPER_NUGGET)
+        .add(Items.RAW_COPPER)
+        .add(Items.COPPER_INGOT)
+        .add(ModItems.RAW_IRON_NUGGET)
+        .add(Items.RAW_IRON)
+        .add(Items.IRON_INGOT)
+        .add(Items.COAL)
+        .add(ModItems.STEEL_INGOT)
+        .add(ModItems.RAW_GOLD_NUGGET)
+        .add(Items.RAW_GOLD)
+        .add(Items.GOLD_INGOT)
+        .add(Items.QUARTZ)
+        .add(ModItems.ROSE_GOLD_INGOT)
+        .add(Items.DIAMOND)
+        .add(Items.WITHER_ROSE)
+        .add(Items.NETHERITE_INGOT);
     }
 }
